@@ -1,42 +1,12 @@
-url: `${KIBANA_URL}/app/logs/settings`
-
-## screenshots_by_version
-
-### 7.15
-
-![](k_o_l_s_7_15.png)
-
-#### 7.15_deprecations
-
-![](k_o_l_s_7_15_d.png)
-
-### 7.14
-
-![](k_o_l_s_7_14.png)
-
-### 7.13
-
-![](k_o_l_s_7_13.png)
-
-### 7.12
-
-![](k_o_l_s_7_12.png)
-
-### 7.11
-
-![](k_o_l_s_7_11.png)
-
-### 7.10
-
-![](k_o_l_s_7_10.png)
-
-### 7.9
-
-![](k_o_l_s_7_9.png)
+[Elastic doc](https://www.elastic.co/guide/en/observability/current/configure-data-sources.html#edit-config-settings)
 
 ## page_load
 
-<details><summary>`GET ${KIBANA_URL}/api/infra/log_source_configurations/default`</summary>
+url: `${KIBANA_URL}/app/logs/settings`
+
+### 1.config
+
+`GET ${KIBANA_URL}/api/infra/log_source_configurations/default`
 
 ```
 {
@@ -93,10 +63,10 @@ url: `${KIBANA_URL}/app/logs/settings`
 }
 ```
 
-</details>
+### 2.config_status
 
 
-<details><summary>`GET ${KIBANA_URL}/api/infra/log_source_configurations/default/status`</summary>
+`GET ${KIBANA_URL}/api/infra/log_source_configurations/default/status`
 
 ```
 {
@@ -107,5 +77,37 @@ url: `${KIBANA_URL}/app/logs/settings`
 }
 ```
 
-</details>
+## screenshots_by_version
+
+### 7.15
+
+![](k_o_l_s_7_15.png)
+
+#### 7.15_deprecations
+
+![](k_o_l_s_7_15_d.png)
+
+### 7.14
+
+![](k_o_l_s_7_14.png)
+
+### 7.13
+
+![](k_o_l_s_7_13.png)
+
+### 7.12
+
+![](k_o_l_s_7_12.png)
+
+### 7.11
+
+![](k_o_l_s_7_11.png)
+
+### 7.10
+
+![](k_o_l_s_7_10.png)
+
+### 7.9
+
+![](k_o_l_s_7_9.png)
 
