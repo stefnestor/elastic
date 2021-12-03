@@ -1,10 +1,14 @@
-url: `/app/logs/settings`
+url: `${KIBANA_URL}/app/logs/settings`
 
 ## screenshots_by_version
 
 ### 7.15
 
 ![](k_o_l_s_7_15.png)
+
+#### 7.15_deprecations
+
+![](k_o_l_s_7_15_d.png)
 
 ### 7.14
 
@@ -29,3 +33,79 @@ url: `/app/logs/settings`
 ### 7.9
 
 ![](k_o_l_s_7_9.png)
+
+## page_load
+
+<details><summary>`GET ${KIBANA_URL}/api/infra/log_source_configurations/default`</summary>
+
+```
+{
+    "data":
+    {
+        "configuration":
+        {
+            "description": "",
+            "fields":
+            {
+                "container": "container.id",
+                "host": "host.name",
+                "message":
+                [
+                    "message",
+                    "@message"
+                ],
+                "pod": "kubernetes.pod.uid",
+                "tiebreaker": "_doc",
+                "timestamp": "@timestamp"
+            },
+            "logColumns":
+            [
+                {
+                    "timestampColumn":
+                    {
+                        "id": "5e7f964a-be8a-40d8-88d2-fbcfbdca0e2f"
+                    }
+                },
+                {
+                    "fieldColumn":
+                    {
+                        "field": "event.dataset",
+                        "id": " eb9777a8-fcd3-420e-ba7d-172fff6da7a2"
+                    }
+                },
+                {
+                    "messageColumn":
+                    {
+                        "id": "b645d6da-824b-4723-9a2a-e8cece1645c0"
+                    }
+                }
+            ],
+            "logIndices":
+            {
+                "indexName": "logs-*,filebeat-*,kibana_sample_data_logs*",
+                "type": "index_name"
+            },
+            "name": "Default"
+        },
+        "id": "default",
+        "origin": "fallback"
+    }
+}
+```
+
+</details>
+
+
+<details><summary>`GET ${KIBANA_URL}/api/infra/log_source_configurations/default/status`</summary>
+
+```
+{
+    "data":
+    {
+        "logIndexStatus": "available"
+    }
+}
+```
+
+</details>
+
